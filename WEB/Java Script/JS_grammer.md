@@ -27,3 +27,55 @@
 # 리팩토링
 직역하면 공장으로 다시보낸다. 즉 코드를 개선시켜서 효율성을 높이는 작업
 
+# library vs framework
+## library
+- 만들고자 하는 프로그램에 필요한 부품이 되는 소프트웨어
+- jQuery가 가장 많이 스이고 오래되고 안정적
+## framework
+- 만들고자 하는 것의 기본토대를 제공한다는 느낌인듯
+
+# UI vs API
+## User Interface
+## Application Programming Interface
+- 애플리케이션을 만들기 위해서 프로그램이을 할 때 사용하는 조작 장치
+  - 예를 들어 `alert`가 API
+
+# 검색어 추천
+- document
+  
+  웹페이지에 있는 어떤 태그를 삭제하고 싶거나 어떤 태그에 자식 태그를 추가하고 싶을 때
+  - DOM(Docyment Object MOdel)
+    document 객체에서 찾을 수 없다면 DOM까지 수색범위를 넓혀보아라
+
+- window
+  
+  웹 브라우저 자체를 제어할 때
+
+- ajax
+  
+  웹 페이지를 리로드 하지 않고 정보를 변경하고 싶을 때
+
+- cookie
+  
+  웹 페이지가 리로드 되어도 현 상태를 유지하고 싶을 때, 사용자를 위한 개인화된 서비스를 제공할 수 있음
+
+- offline web application
+  
+  인터넷이 끊겨도 동작하는 웹 페이지
+
+- webRTC
+ 
+  화상 통신 웹
+
+- speech
+  
+  음성 인식 및 음성 정보 전달하는 웹
+
+- webGL
+  
+  3차원 게임 만들고 싶을 때
+
+- webVR
+  
+  가상현실 웹
+
