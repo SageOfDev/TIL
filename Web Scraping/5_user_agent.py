@@ -1,4 +1,6 @@
 '''
+https://www.youtube.com/watch?v=yQ20jZwDjTE
+9. User Agent  보다 말음
 
 https://www.whatismybrowser.com/detect/what-is-my-user-agent
 접속하는 브라우저마다 Uset Agent가 다름
