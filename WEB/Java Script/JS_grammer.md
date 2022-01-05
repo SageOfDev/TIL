@@ -5,7 +5,8 @@
 1. <script></script> 태그를 이용하여 사용한다
 
 2. event 속성을 사용한다.
-    ```<body>
+    ```
+    <body>
         <input type="button" value="hi" onclick="alert('hi')">
     </body>
     ```
@@ -30,7 +31,7 @@
 # library vs framework
 ## library
 - 만들고자 하는 프로그램에 필요한 부품이 되는 소프트웨어
-- jQuery가 가장 많이 스이고 오래되고 안정적
+- jQuery가 가장 많이 쓰이고 오래되고 안정적
 ## framework
 - 만들고자 하는 것의 기본토대를 제공한다는 느낌인듯
 
