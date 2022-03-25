@@ -4,12 +4,14 @@ from rest_framework import serializers
 from snippets.models import LANGUAGE_CHOICES, STYLE_CHOICES, Snippet
 
 
-class SnippetSerializer(serializers.ModelSerializer):
+class SnippetSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
+    highlight = serializers.HyperlinkedIdentityField(view_name='snippet-highlight', format='html')
 
     class Meta:
         model = Snippet
-        fields = ['id', 'title', 'code', 'linenos', 'language', 'style', 'owner']
+        fields = ['url', 'id', 'highlight' 'owner',
+                  'title', 'code', 'linenos', 'language', 'style']
         # id = serializers.IntegerField(read_only=True)
         # title = serializers.CharField(required=False, allow_blank=True, max_length=100)
         # code = serializers.CharField(style={'base_template': 'textarea.html'})
@@ -36,10 +38,11 @@ class SnippetSerializer(serializers.ModelSerializer):
         return instance
 
 
-class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.HyperlinkedModelSerializer):
     # 역관계는 이부분을 언급해주어야한다고 하는데, 왠지 자동으로 되는 것 같다. 나중에 다시 확인해보자
     # snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Snippet.objects.all())
+    snippets = serializers.HyperlinkedRelatedField(many=True, view_name='snippet-detail', read_only=True)
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'snippets']
+        fields = ['url', 'id', 'username', 'snippets']
